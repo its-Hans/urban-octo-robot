@@ -11,6 +11,7 @@ allprojects {
 			url 'https://maven.aliyun.com/repository/public/'
 		}
 
+		mavenLocal()
 		mavenCentral()
 	}
 }
