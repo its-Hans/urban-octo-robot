@@ -3,7 +3,18 @@ pluginManagement {
         maven {
             url 'https://maven.aliyun.com/repository/gradle-plugin'
         }
+
+        mavenCentral()
+        gradlePluginPortal()
     }
 }
 
-rootProject.name = project_name
+dependencyResolutionManagement {
+    repositories {
+        maven {
+            url 'https://maven.aliyun.com/repository/central'
+        }
+
+        mavenCentral()
+    }
+}

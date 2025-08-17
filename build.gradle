@@ -5,24 +5,8 @@ plugins {
 version project_version
 group project_group
 
-allprojects {
-	repositories {
-		maven {
-			url 'https://maven.aliyun.com/repository/public/'
-		}
-
-		mavenLocal()
-		mavenCentral()
-	}
-}
-
-def propIn = [
-		name: project_name,
-		version: project_version
-]
-
 jar {
-	inputs.properties(propIn)
+	inputs.property('name', name)
 	from('LICENSE') {
 		rename { "${it}_${inputs.properties.name}" }
 	}
